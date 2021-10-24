@@ -24,7 +24,7 @@ export const APIExams = {
     edit_exam:{
         url:base_url+"/api/Exams/",// +id
         params:JSON.stringify({
-            idexam:0,
+            idexam:'',
             name:'',
             dateexam:'',
             lodifficult:'',

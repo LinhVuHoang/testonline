@@ -2,9 +2,18 @@ import React from "react";
 import {Switch,Route} from "react-router-dom";
 import Exams from "./Models/Exams";
 import AddExam from "./Exam/AddExam";
+import EditExam from "./Exam/EditExam";
+import Questions from "./Models/Questions";
+import AddQuestion from "./Question/AddQuestion";
+import EditQuestion from "./Question/EditQuestion";
+import QandAs from "./Models/QandAs";
+import AddQandA from "./QuestionandAnswer/AddQandA";
+import EditQandA from "./QuestionandAnswer/EditQandA";
+import QandExam from "./Models/QandExam";
+import AddQandE from "./QuestionandExam/AddQandE";
+import EditQandE from "./QuestionandExam/EditQandE";
 export default class Main extends React.Component{
     render() {
-
 //name và price trong product truyền vào props của con
         //ls.map là vòng lặp
         //nội dung khác nhau nằm trong switch hay nó là các component(thành phần ) khác nhau
@@ -228,6 +237,36 @@ export default class Main extends React.Component{
                             </Route>
                             <Route path="/add-exam" exact>
                                 <AddExam/>
+                            </Route>
+                            <Route path = "/edit-exam/:id" exact>
+                                <EditExam/>
+                            </Route>
+                            <Route path="/questions" exact>
+                                <Questions/>
+                            </Route>
+                            <Route path="/add-question" exact>
+                                <AddQuestion/>
+                            </Route>
+                            <Route path="/edit-question/:id" exact>
+                                <EditQuestion/>
+                            </Route>
+                            <Route path="/qandas" exact>
+                                <QandAs/>
+                            </Route>
+                            <Route path="/add-qanda" exact>
+                                <AddQandA/>
+                            </Route>
+                            <Route path="/edit-qanda/:id" exact>
+                                <EditQandA/>
+                            </Route>
+                            <Route path="/qandexams" exact>
+                                <QandExam/>
+                            </Route>
+                            <Route path="/add-qandexam" exact>
+                                <AddQandE/>
+                            </Route>
+                            <Route path="/edit-qandexam/:id" exact>
+                                <EditQandE/>
                             </Route>
                             {/*<Route path="/add-category" exact>*/}
                             {/*    <AddCategory/>*/}

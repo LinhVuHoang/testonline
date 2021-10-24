@@ -40,7 +40,7 @@ export default class Sidebar extends React.Component{
                     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
                     rel="stylesheet"/>
                 <link href="css/sb-admin-2.min.css" rel="stylesheet"/>
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/index.html">
                     <div className="sidebar-brand-icon rotate-n-15">
                         <i className="fas fa-laugh-wink"></i>
                     </div>
@@ -48,7 +48,7 @@ export default class Sidebar extends React.Component{
                 </a>
                 <hr className="sidebar-divider my-0"/>
                 <li className="nav-item active">
-                    <a className="nav-link" href="dashboard.html">
+                    <a className="nav-link" href="/dashboard.html">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
@@ -66,8 +66,8 @@ export default class Sidebar extends React.Component{
                          data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Custom Components:</h6>
-                            <a className="collapse-item" href="buttons.html">Buttons</a>
-                            <a className="collapse-item" href="cards.html">Cards</a>
+                            <a className="collapse-item" href="http://localhost:3000/buttons.html">Buttons</a>
+                            <a className="collapse-item" href="http://localhost:3000/cards.html">Cards</a>
                         </div>
                     </div>
                 </li>
@@ -81,10 +81,10 @@ export default class Sidebar extends React.Component{
                          data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Custom Utilities:</h6>
-                            <a className="collapse-item" href="utilities-color.html">Colors</a>
-                            <a className="collapse-item" href="utilities-border.html">Borders</a>
-                            <a className="collapse-item" href="utilities-animation.html">Animations</a>
-                            <a className="collapse-item" href="utilities-other.html">Other</a>
+                            <a className="collapse-item" href="/utilities-color.html">Colors</a>
+                            <a className="collapse-item" href="/utilities-border.html">Borders</a>
+                            <a className="collapse-item" href="/utilities-animation.html">Animations</a>
+                            <a className="collapse-item" href="/utilities-other.html">Other</a>
                         </div>
                     </div>
                 </li>
@@ -102,28 +102,43 @@ export default class Sidebar extends React.Component{
                          data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Login Screens:</h6>
-                            <a className="collapse-item" href="login.html">Login</a>
-                            <a className="collapse-item" href="register.html">Register</a>
-                            <a className="collapse-item" href="forgot-password.html">Forgot Password</a>
+                            <a className="collapse-item" href="/login.html">Login</a>
+                            <a className="collapse-item" href="/register.html">Register</a>
+                            <a className="collapse-item" href="/forgot-password.html">Forgot Password</a>
                             <div className="collapse-divider"></div>
                             <h6 className="collapse-header">Other Pages:</h6>
-                            <a className="collapse-item" href="404.html">404 Page</a>
-                            <a className="collapse-item" href="blank.html">Blank Page</a>
+                            <a className="collapse-item" href="/404.html">404 Page</a>
+                            <a className="collapse-item" href="/blank.html">Blank Page</a>
                         </div>
                     </div>
                 </li>
                 <li className="nav-item">
-                    <Link to="exams" className="nav-link">
+                    <Link to="/exams" className="nav-link">
                         <i className="fas fa-fw fa-file"></i>
                         <span>Exams</span></Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="charts.html">
+                    <Link to="/questions" className="nav-link">
+                        <i className="fas fa-fw fa-question"></i>
+                        <span>Question</span></Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/qandas" className="nav-link">
+                        <i className="fas fa-fw fa-question-circle"></i>
+                        <span>Question and Answer</span></Link>
+                </li>
+                <li className="nav-item">
+                <Link to="/qandexams" className="nav-link">
+                    <i className="fas fa-fw fa-file-pdf"></i>
+                    <span>Question and Exams</span></Link>
+            </li>
+                <li className="nav-item">
+    <a className="nav-link" href="/charts.html">
                         <i className="fas fa-fw fa-chart-area"></i>
                         <span>Charts</span></a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="tables.html">
+                    <a className="nav-link" href="/tables.html">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Tables</span></a>
                 </li>
