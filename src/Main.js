@@ -6,9 +6,6 @@ import EditExam from "./Exam/EditExam";
 import Questions from "./Models/Questions";
 import AddQuestion from "./Question/AddQuestion";
 import EditQuestion from "./Question/EditQuestion";
-import QandAs from "./Models/QandAs";
-import AddQandA from "./QuestionandAnswer/AddQandA";
-import EditQandA from "./QuestionandAnswer/EditQandA";
 import QandExam from "./Models/QandExam";
 import AddQandE from "./QuestionandExam/AddQandE";
 import EditQandE from "./QuestionandExam/EditQandE";
@@ -20,7 +17,7 @@ export default class Main extends React.Component{
         //tạo 1 công tắc để đi đến các đường dẫn khác nhau, khai báo đường dẫn trong đây exact để kiểm tra
         //nếu đường lẫn trên trình duyệt chính xác thì chuyển trang
         return(
-            <div id="content-wrapper" className="d-flex flex-column">
+            <div  id="content-wrapper" className="d-flex flex-column">
                 <div id="content">
 
                     <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -249,15 +246,6 @@ export default class Main extends React.Component{
                             </Route>
                             <Route path="/edit-question/:id" exact>
                                 <EditQuestion/>
-                            </Route>
-                            <Route path="/qandas" exact>
-                                <QandAs/>
-                            </Route>
-                            <Route path="/add-qanda" exact>
-                                <AddQandA/>
-                            </Route>
-                            <Route path="/edit-qanda/:id" exact>
-                                <EditQandA/>
                             </Route>
                             <Route path="/qandexams" exact>
                                 <QandExam/>

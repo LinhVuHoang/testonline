@@ -7,9 +7,12 @@ export default class AddQuestion extends React.Component{
         super(props);
         this.state ={
             question:{
-                idquestion:'',
+                idquestion:0,
                 contentq:'',
-                answer:'',
+                answertrue:'',
+                answer1false:'',
+                answer2false:'',
+                answer3false:'',
                 lodifficult:'',
                 dateq:'',
                 point:0.00,
@@ -44,8 +47,6 @@ export default class AddQuestion extends React.Component{
             this.setState({
                 redirect:true
             })
-        }).catch(err=>{
-            alert("Id bị trùng");
         })
         event.preventDefault();
     }
@@ -61,17 +62,24 @@ export default class AddQuestion extends React.Component{
                     <section className="col-6 text-left">
                         <form onSubmit={this.submit} method="post">
                             <div className="form-group">
-                                <label>Id exam</label>
-                                <input name="idquestion" type="text" onChange={this.handleChange} value={question.idquestion}
-                                       placeholder="Nhập id"     className="form-control" minLength="1" maxLength="12" required/>
-                            </div>
-                            <div className="form-group">
                                 <label>Content</label>
                                 <textarea name="contentq" placeholder="Nhập nội dung câu hỏi" onChange={this.handleChange} value={question.contentq} className="form-control" required/>
                             </div>
                             <div className="form-group">
-                                <label>Answer</label>
-                                <textarea name="answer" placeholder="Nhập câu trả lời"  onChange={this.handleChange} value={question.answer} className="form-control"  required/>
+                                <label>Answer true</label>
+                                <textarea name="answertrue" placeholder="Nhập câu trả lời đúng"  onChange={this.handleChange} value={question.answertrue} className="form-control"  required/>
+                            </div>
+                            <div className="form-group">
+                                <label>Answer false 1</label>
+                                <textarea name="answer1false" placeholder="Nhập câu trả lời sai"  onChange={this.handleChange} value={question.answer1false} className="form-control"  required/>
+                            </div>
+                            <div className="form-group">
+                                <label>Answer false 2</label>
+                                <textarea name="answer2false" placeholder="Nhập câu trả lời sai"  onChange={this.handleChange} value={question.answer2false} className="form-control"  required/>
+                            </div>
+                            <div className="form-group">
+                                <label>Answer false 3</label>
+                                <textarea name="answer3false" placeholder="Nhập câu trả lời sai"  onChange={this.handleChange} value={question.answer3false} className="form-control"  required/>
                             </div>
                             <div className="form-group">
                                 <label>Độ khó</label>
@@ -83,7 +91,7 @@ export default class AddQuestion extends React.Component{
                             </div>
                             <div className="form-group">
                                 <label>Điểm câu:</label>
-                                <input name="point" onChange={this.handleChange} value={question.point} type="number"  placeholder='0.00' title="điểm phải là số nguyên hoặc thập phân" required/>
+                                <input name="point" onChange={this.handleChange} value={question.point} type="number" min="0.25" max="5.0" step="0.25"  placeholder='0.00' title="điểm phải là số nguyên hoặc thập phân <5" required/>
                             </div>
                             <div className="form-group">
                                 <button type="submit" className="btn btn-danger">Submit</button>

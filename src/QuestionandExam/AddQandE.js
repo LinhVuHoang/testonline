@@ -10,9 +10,10 @@ export default class AddQandE extends React.Component{
         super(props);
         this.state ={
             qandexam:{
-                question:'',
-                answer:'',
-                id:''
+                question:0,
+                datemake:'',
+                idexam:0,
+                id:0
             },
             question:[],
             exam:[],
@@ -79,11 +80,6 @@ export default class AddQandE extends React.Component{
 
                     <section className="col-6 text-left">
                         <form onSubmit={this.submit} method="post">
-                            <div className="form-group">
-                                <label>ID</label>
-                                <input name="id" onChange={this.handleChange} value={qandexam.id}
-                                       className="form-control" placeholder="Nhập id" required/>
-                            </div>
                             <div className="form-group">
                                 <label>Question</label>
                                 <select  name="question" onChange={this.handleChange} className="form-control"  required>

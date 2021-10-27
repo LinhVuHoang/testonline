@@ -7,7 +7,7 @@ export default class AddExam extends React.Component{
         super(props);
         this.state ={
             exam:{
-                idexam:'',
+                idexam:0,
                 name:'',
                 dateexam:'',
                 lodifficult:'',
@@ -59,12 +59,6 @@ export default class AddExam extends React.Component{
                 <div className="row">
                     <section className="col-6 text-left">
                         <form onSubmit={this.submit} method="post">
-                            <div className="form-group">
-                                <label>Id exam</label>
-                                <input name="idexam" type="text" onChange={this.handleChange} value={exam.idexam}
-
-                              placeholder="Nhập id"         className="form-control" minLength="1" maxLength="12" required/>
-                            </div>
                             <div className="form-group">
                                 <label>Name</label>
                                 <input name="name" placeholder="Nhập name" onChange={this.handleChange} value={exam.name} className="form-control" required/>

@@ -1,4 +1,4 @@
-const base_url = "https://localhost:44347";
+const base_url = "https://localhost:44379";
 export const APIQuestionAndExam= {
     qandexams:{
         url:base_url+"/api/Qexams",
@@ -8,10 +8,10 @@ export const APIQuestionAndExam= {
     add_qandexam:{
         url:base_url+"/api/Qexams",
         params:JSON.stringify({
-            idexam:'',
+            idexam:0,
             datemake:'',
-            question:'',
-            id:''
+            question:0,
+            id:0
         }),
         method:"POST"
     },
@@ -23,10 +23,10 @@ export const APIQuestionAndExam= {
     edit_qandexam:{
         url:base_url+"/api/Qexams/",// +id
         params:JSON.stringify({
-            idexam:'',
+            idexam:0,
             datemake:'',
-            question:'',
-            id:''
+            question:0,
+            id:0
         }),
         method:"PUT"
     },

@@ -7,7 +7,7 @@ class EditExam extends React.Component{
         super(props);
         this.state = {
             exam: {
-                id:'',
+                id:0,
                 name: '',
                 dateexam: '',
                 lodifficult: '',
@@ -49,8 +49,6 @@ class EditExam extends React.Component{
             this.setState({
                 redirect:true
             })
-        }).catch(err=>{
-            alert("id bi trùng");
         })
         event.preventDefault();
     }

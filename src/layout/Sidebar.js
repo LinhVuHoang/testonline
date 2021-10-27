@@ -33,7 +33,7 @@ export default class Sidebar extends React.Component{
     }
     render() {
         return (
-            <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion  "  id="accordionSidebar">
+            <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled "  id="accordionSidebar">
 
                 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"/>
                 <link
@@ -121,11 +121,6 @@ export default class Sidebar extends React.Component{
                     <Link to="/questions" className="nav-link">
                         <i className="fas fa-fw fa-question"></i>
                         <span>Question</span></Link>
-                </li>
-                <li className="nav-item">
-                    <Link to="/qandas" className="nav-link">
-                        <i className="fas fa-fw fa-question-circle"></i>
-                        <span>Question and Answer</span></Link>
                 </li>
                 <li className="nav-item">
                 <Link to="/qandexams" className="nav-link">

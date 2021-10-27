@@ -8,12 +8,15 @@ class EditQuestion extends React.Component{
         super(props);
         this.state = {
            question: {
-                id:'',
-                contentq:'',
-                answer:'',
-                lodifficult:'',
-                dateq:'',
-                point:'',
+               idquestion:0,
+               contentq:'',
+               answertrue:'',
+               answer1false:'',
+               answer2false:'',
+               answer3false:'',
+               lodifficult:'',
+               dateq:'',
+               point:0.00,
             },
             redirect: false
 
@@ -72,8 +75,20 @@ class EditQuestion extends React.Component{
                                 <textarea name="contentq" placeholder="Nhập nội dung câu hỏi" onChange={this.handleChange} value={question.contentq} className="form-control" required/>
                             </div>
                             <div className="form-group">
-                                <label>Answer</label>
-                                <textarea name="answer" placeholder="Nhập câu trả lời"  onChange={this.handleChange} value={question.answer} className="form-control"  required/>
+                                <label>Answer true</label>
+                                <textarea name="answertrue" placeholder="Nhập câu trả lời đúng"  onChange={this.handleChange} value={question.answertrue} className="form-control"  required/>
+                            </div>
+                            <div className="form-group">
+                                <label>Answer false 1</label>
+                                <textarea name="answer1false" placeholder="Nhập câu trả lời sai"  onChange={this.handleChange} value={question.answer1false} className="form-control"  required/>
+                            </div>
+                            <div className="form-group">
+                                <label>Answer false 2</label>
+                                <textarea name="answer2false" placeholder="Nhập câu trả lời sai"  onChange={this.handleChange} value={question.answer2false} className="form-control"  required/>
+                            </div>
+                            <div className="form-group">
+                                <label>Answer false 3</label>
+                                <textarea name="answer3false" placeholder="Nhập câu trả lời sai"  onChange={this.handleChange} value={question.answer3false} className="form-control"  required/>
                             </div>
                             <div className="form-group">
                                 <label>Độ khó</label>

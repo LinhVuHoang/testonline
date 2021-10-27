@@ -38,21 +38,25 @@ export  default class Questions extends React.Component{
     render() {
         const question = this.state.questions;
         return (
-            <div>
+            <div >
                 <h1>Questions</h1>
-                <div className="row">
+                <div  className="row">
                     <section className="col-12 text-right">
                         <Link to = "/add-question" className="btn btn-primary">Add Question</Link>
                     </section>
                     <section className="col-12">
-                        <table className="table">
+
+                        <table className="table" >
                             <thead>
                             <tr>
                                 <th>IdQuestion</th>
                                 <th>Content</th>
                                 <th>Answer</th>
+                                <th>Answerf1</th>
+                                <th>Answerf2</th>
+                                <th>Answerf3</th>
                                 <th>Level</th>
-                                <th>Date Make</th>
+                                <th>Date</th>
                                 <th>Point</th>
                                 <th>Action</th>
                             </tr>
@@ -63,7 +67,10 @@ export  default class Questions extends React.Component{
                                     return <tr key={k}>
                                         <td>{e.idquestion}</td>
                                         <td>{e.contentq}</td>
-                                        <td>{e.answer}</td>
+                                        <td>{e.answertrue}</td>
+                                        <td>{e.answer1false}</td>
+                                        <td>{e.answer2false}</td>
+                                        <td>{e.answer3false}</td>
                                         <td>{e.lodifficult}</td>
                                         <td>{e.dateq.split("T00:00:00")}</td>
                                         <td>{e.point}</td>

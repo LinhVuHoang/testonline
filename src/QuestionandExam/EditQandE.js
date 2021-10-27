@@ -9,9 +9,10 @@ class EditQandE extends React.Component{
         super(props);
         this.state = {
             qandexam: {
-                question: '',
-                answer: '',
-                id: ''
+                idexam:0,
+                question: 0,
+                datemake: '',
+                id: 0
             },
             question: [],
             exam:[],

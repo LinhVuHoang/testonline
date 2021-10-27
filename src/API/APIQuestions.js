@@ -1,4 +1,4 @@
-const base_url = "https://localhost:44347";
+const base_url = "https://localhost:44379";
 export const APIQuestions = {
     questions:{
         url:base_url+"/api/Questions",
@@ -8,12 +8,15 @@ export const APIQuestions = {
     add_question:{
         url:base_url+"/api/Questions",
         params:JSON.stringify({
-            idquestion:'',
+            idquestion:0,
             contentq:'',
-            answer:'',
+            answertrue:'',
+            answer1false:'',
+            answer2false:'',
+            answer3false:'',
             lodifficult:'',
             dateq:'',
-            point:'',
+            point:0.00,
         }),
         method:"POST"
     },
@@ -25,9 +28,12 @@ export const APIQuestions = {
     edit_question:{
         url:base_url+"/api/Questions/",// +id
         params:JSON.stringify({
-            idquestion:'',
+            idquestion:0,
             contentq:'',
-            answer:'',
+            answertrue:'',
+            answerfalse1:'',
+            answerfalse2:'',
+            answerfalse3:'',
             lodifficult:'',
             dateq:'',
             point:''
